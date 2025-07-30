@@ -128,8 +128,8 @@ h1 {
 
 .ramo h4 {
     font-family: 'Solway', serif;
-    font-size: 18px;
-    font-weight: 400; /* Normal/non-bold */
+    font-size: 25px;
+    font-weight: 400;
     margin: 0 0 0.3rem 0;
     color: #d81b60;
     text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
