@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Malla Interactiva Medicina</h1>
+  <div id="malla">
+    <!-- Aquí van los ramos -->
+    <div class="ramo" id="matematica" data-creditos="3" data-requisitos="">Matemática</div>
+    <div class="ramo bloqueado" id="fisica" data-creditos="4" data-requisitos="matematica">Física</div>
+    <div class="ramo bloqueado" id="bioquimica" data-creditos="4" data-requisitos="biocel">Bioquímica</div>
+    <div class="ramo" id="biocel" data-creditos="4" data-requisitos="">Biocel</div>
+    <!-- Puedes agregar todos los demás ramos acá -->
+  </div>
+
+  <div id="creditos">Créditos aprobados: 0</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
