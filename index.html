@@ -1,23 +1,466 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Interactiva</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular de Medicina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Interactiva Medicina</h1>
-  <div id="malla">
-    <!-- Aquí van los ramos -->
-    <div class="ramo" id="matematica" data-creditos="3" data-requisitos="">Matemática</div>
-    <div class="ramo bloqueado" id="fisica" data-creditos="4" data-requisitos="matematica">Física</div>
-    <div class="ramo bloqueado" id="bioquimica" data-creditos="4" data-requisitos="biocel">Bioquímica</div>
-    <div class="ramo" id="biocel" data-creditos="4" data-requisitos="">Biocel</div>
-    <!-- Puedes agregar todos los demás ramos acá -->
-  </div>
+<header>
+    <h1>Malla Curricular de Medicina</h1>
+    <div class="creditos-totales">
+        <span>Créditos acumulados: </span>
+        <span id="total-creditos">0</span>
+    </div>
+    <div class="leyendas-header">
+        <small><i>* Agentes Vivos de la Enfermedad</i></small>
+        <small><i>** Módulo Integrado Interdisciplinario y Multiprofesional</i></small>
+    </div>
+</header>
 
-  <div id="creditos">Créditos aprobados: 0</div>
+    <main>
+        <div class="malla-container">
+            <!-- Año 1 -->
+            <div class="year-section" id="year-1">
+                <h2>Primer Año</h2>
+                <div class="semester">
+                    <h3>Semestre 1</h3>
+                    <div class="ramos-container">
+                        <div class="ramo" data-creditos="3" data-requisitos="">
+                            <h4>Matemática</h4>
+                            <p>3 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="">
+                            <h4>Química</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="">
+                            <h4>Inglés I</h4>
+                            <p>3 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="2" data-requisitos="">
+                            <h4>CFG I</h4>
+                            <p>2 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="">
+                            <h4>Anato I</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="">
+                            <h4>IPM</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="4" data-requisitos="">
+                            <h4>MyS</h4>
+                            <p>4 créditos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="semester">
+                    <h3>Semestre 2</h3>
+                    <div class="ramos-container">
+                        <div class="ramo" data-creditos="4" data-requisitos="MyS">
+                            <h4>MPyS</h4>
+                            <p>4 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="5" data-requisitos="Matemática">
+                            <h4>Física</h4>
+                            <p>5 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="IPM">
+                            <h4>Biocel</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="Inglés I">
+                            <h4>Inglés II</h4>
+                            <p>3 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="">
+                            <h4>Histo y embrio</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="4" data-requisitos="Anato I">
+                            <h4>Anato II</h4>
+                            <p>4 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="2" data-requisitos="IPM">
+                            <h4>ISP</h4>
+                            <p>2 créditos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <script src="script.js"></script>
+            <!-- Año 2 -->
+            <div class="year-section" id="year-2">
+                <h2>Segundo Año</h2>
+                <div class="semester">
+                    <h3>Semestre 3</h3>
+                    <div class="ramos-container">
+                        <div class="ramo" data-creditos="2" data-requisitos="Matemática">
+                            <h4>Bioestadística</h4>
+                            <p>2 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="8" data-requisitos="Anato I,Física,Biocel">
+                            <h4>Fisio I</h4>
+                            <p>8 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="4" data-requisitos="Biocel">
+                            <h4>Bioquímica</h4>
+                            <p>4 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="5" data-requisitos="Biocel">
+                            <h4>Genética</h4>
+                            <p>5 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="2" data-requisitos="">
+                            <h4>Unidad de Investigación I</h4>
+                            <p>2 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="6" data-requisitos="IPM,MPyS">
+                            <h4>Semio I</h4>
+                            <p>6 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="">
+                            <h4>Bioética</h4>
+                            <p>3 créditos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="semester">
+                    <h3>Semestre 4</h3>
+                    <div class="ramos-container">
+                        <div class="ramo" data-creditos="2" data-requisitos="">
+                            <h4>CFG II</h4>
+                            <p>2 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="8" data-requisitos="Fisio I,Bioquímica">
+                            <h4>Fisio II</h4>
+                            <p>8 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="Genética">
+                            <h4>Inmunología</h4>
+                            <p>3 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="Genética">
+                            <h4>Medicina Evolutiva</h4>
+                            <p>3 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="2" data-requisitos="Unidad de Investigación I">
+                            <h4>Unidad de Investigación II</h4>
+                            <p>2 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="9" data-requisitos="Anato II,Semio I">
+                            <h4>Semio II</h4>
+                            <p>9 créditos</p>
+                        </div>
+                        <div class="ramo" data-creditos="3" data-requisitos="70">
+                            <h4>Casos Integradores I</h4>
+                            <p>3 créditos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Año 3 -->
+<div class="year-section" id="year-3">
+    <h2>Tercer Año</h2>
+    <div class="semester">
+        <h3>Semestre 5</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="4" data-requisitos="Fisio II">
+                <h4>Fisiopato I</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Bioquímica,Fisio II">
+                <h4>Fármaco I</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Fisio II,Inmunología">
+                <h4>Bichos [A.V.E] I</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="9" data-requisitos="Fisio II,Semio II">
+                <h4>Medicina Interna I</h4>
+                <p>9 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Bioética">
+                <h4>Ética Clínica I</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="ISP,Bioestadística">
+                <h4>Epidemiología Descriptiva</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="90">
+                <h4>MIIM I</h4>
+                <p>4 créditos</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="semester">
+        <h3>Semestre 6</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="4" data-requisitos="Fisiopato I">
+                <h4>Fisiopato II</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Fisiopato I,Fármaco I">
+                <h4>Fármaco II</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Bichos [A.V.E] I">
+                <h4>Bichos [A.V.E] II</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="14" data-requisitos="Medicina Interna I">
+                <h4>Medicina Interna II</h4>
+                <p>14 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Epidemiología Descriptiva">
+                <h4>Epidemiología Analítica</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Fisio II,Semio II">
+                <h4>Casos Integradores II</h4>
+                <p>2 créditos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Año 4 -->
+<div class="year-section" id="year-4">
+    <h2>Cuarto Año</h2>
+    <div class="semester">
+        <h3>Semestre 7</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="4" data-requisitos="Medicina Interna II">
+                <h4>Med. General Familiar I</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="9" data-requisitos="Medicina Interna II">
+                <h4>Cirugía</h4>
+                <p>9 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="5" data-requisitos="Medicina Interna II">
+                <h4>Geriatría</h4>
+                <p>5 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Histo y embrio,Anato II,Medicina Interna I">
+                <h4>Anatomía Patológica</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Ética Clínica I">
+                <h4>Ética Clínica II</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Medicina Interna II,Casos Integradores II">
+                <h4>Casos Integradores III</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="">
+                <h4>CFG III</h4>
+                <p>2 créditos</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="semester">
+        <h3>Semestre 8</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="9" data-requisitos="Med. General Familiar I">
+                <h4>Med. General Familiar II</h4>
+                <p>9 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="8" data-requisitos="Medicina Interna II">
+                <h4>Especialidades Med. y Quir. I</h4>
+                <p>8 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Medicina Interna II">
+                <h4>Neurología</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Medicina Interna II">
+                <h4>Medicina Legal</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Epidemiología Descriptiva,180">
+                <h4>Dg. situación de salud</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Epidemiología Descriptiva,150">
+                <h4>Seguridad social y Atención de Salud</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="MyS,Biocel,ISP,Med. General Familiar I">
+                <h4>Electivo profesional I</h4>
+                <p>3 créditos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Año 5 -->
+<div class="year-section" id="year-5">
+    <h2>Quinto Año</h2>
+    <div class="semester">
+        <h3>Semestre 9</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="10" data-requisitos="Cirugía">
+                <h4>Pediatría y Cx Infantil</h4>
+                <p>10 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="8" data-requisitos="Cirugía">
+                <h4>Especialidades Med. y Quir. II</h4>
+                <p>8 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="4" data-requisitos="Cirugía">
+                <h4>Medicina de Urgencia</h4>
+                <p>4 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="MIIM I">
+                <h4>Gestión I</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="MyS,Biocel,ISP,Med. General Familiar I">
+                <h4>Electivo profesional II</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Casos Integradores III">
+                <h4>Casos Integradores IV</h4>
+                <p>3 créditos</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="semester">
+        <h3>Semestre 10</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="10" data-requisitos="Cirugía">
+                <h4>Ginecología y Obstetricia</h4>
+                <p>10 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Medicina Interna II">
+                <h4>Psiquiatría</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Med. General Familiar II">
+                <h4>Psiquiatría Infantil</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="Gestión I">
+                <h4>Gestión II</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="MyS,Biocel,ISP,Med. General Familiar I">
+                <h4>Electivo profesional III</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="2" data-requisitos="">
+                <h4>CFG IV</h4>
+                <p>2 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="5" data-requisitos="MIIM I,170">
+                <h4>MIIM II</h4>
+                <p>5 créditos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Año 6 -->
+<div class="year-section" id="year-6">
+    <h2>Sexto Año</h2>
+    <div class="semester">
+        <h3>Semestres 11 y 12</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="26" data-requisitos="Todos">
+                <h4>Internado Medicina Interna</h4>
+                <p>26 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="26" data-requisitos="Todos">
+                <h4>Internado Pediatría</h4>
+                <p>26 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Todos">
+                <h4>Internado Urología</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Todos">
+                <h4>Internado Oftalmología</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Todos">
+                <h4>Internado Otorrinolaringología</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="3" data-requisitos="Todos">
+                <h4>Internado Dermatología</h4>
+                <p>3 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Traumatología</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Urgencias</h4>
+                <p>6 créditos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Año 7 -->
+<div class="year-section" id="year-7">
+    <h2>Séptimo Año</h2>
+    <div class="semester">
+        <h3>Semestres 13 y 14</h3>
+        <div class="ramos-container">
+            <div class="ramo" data-creditos="18" data-requisitos="Todos">
+                <h4>Internado Cirugía</h4>
+                <p>18 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="18" data-requisitos="Todos">
+                <h4>Internado GINE-OBS</h4>
+                <p>18 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Atención 1° urbana</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Atención 1° rural</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Neurología</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Psiquiatría</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Electivo I</h4>
+                <p>6 créditos</p>
+            </div>
+            <div class="ramo" data-creditos="6" data-requisitos="Todos">
+                <h4>Internado Electivo II</h4>
+                <p>6 créditos</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
