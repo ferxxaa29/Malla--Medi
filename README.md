@@ -1,25 +1,38 @@
-# Malla Curricular Interactiva de Medicina
+# 🏥 Malla Interactiva de Medicina
 
-Esta es una malla curricular interactiva para el plan de estudios de medicina. Permite visualizar los ramos por año y semestre, y marcar los ramos completados para llevar un registro del progreso.
+Malla curricular interactiva para el plan de estudios de medicina con seguimiento de progreso y visualización de requisitos.
 
-## Características
+## ✨ Características Principales
 
-- Visualización organizada por años y semestres
-- Cada ramo muestra su nombre y cantidad de créditos
-- Al hacer clic en un ramo:
-  - Se marca como completado (color verde pastel)
-  - Se tacha el nombre
-  - Se suman los créditos al total
-  - Se desbloquean los ramos que lo tienen como requisito
-- Diseño con tonalidades de rosa y magenta
-- Tipografía Lobster para títulos y Raleway para el resto del texto
+- **Interfaz intuitiva** organizada por años y semestres
+- **Sistema de progreso** visual:
+  - Ramos completados en verde pastel con ✓
+  - Ramos bloqueados en gris
+  - Ramos disponibles en tonos rosas
+- **Contador automático** de créditos acumulados
+- **Tooltips informativos** con requisitos al pasar el mouse
+- **Diseño responsive** que funciona en móviles y desktop
+- **Efectos visuales** al completar ramos
 
-## Cómo usar
+## 🎨 Estilo Visual
 
-1. Clona este repositorio
-2. Abre el archivo `index.html` en tu navegador
-3. Haz clic en los ramos que hayas completado para marcarlos
+- Paleta de colores en tonalidades rosas y magentas
+- Tipografía:
+  - Títulos: Lobster
+  - Contenido: Raleway
+- Efectos de hover y animaciones sutiles
 
-## Personalización
+## 🛠️ Cómo Usar
 
-Puedes modificar los colores en el archivo `style.css` cambiando las variables CSS en la sección `:root`.
+1. **Navega** por los años y semestres
+2. **Haz clic** en los ramos completados
+3. **Observa** cómo:
+   - El ramo se marca como completado
+   - Los créditos se suman al contador
+   - Los ramos dependientes se desbloquean
+4. **Consulta** los requisitos pasando el mouse sobre ramos bloqueados
+
+## 📚 Leyendas
+
+- *A.V.E: Agentes Vivos de la Enfermedad
+- *MIIM: Módulo Integrado Interdisciplinario y Multiprofesional
