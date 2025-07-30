@@ -9,6 +9,8 @@
     --texto-oscuro: #333;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Englebert&family=Lobster&family=Raleway:wght@400;500;600;700&display=swap');
+
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
@@ -110,24 +112,26 @@ h1 {
 .ramo {
     background-color: var(--rosa-claro);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 0.8rem;
     cursor: pointer;
     transition: all 0.3s ease;
     border-left: 4px solid var(--magenta-medio);
     position: relative;
     overflow: hidden;
+    min-height: 60px;
 }
 
 .ramo:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .ramo h4 {
-    font-family: 'Lobster', cursive;
-    margin: 0 0 0.5rem 0;
-    color: var(--magenta-oscuro);
-    font-size: 1.1rem;
+    font-family: 'Englebert', sans-serif;
+    margin: 0 0 0.3rem 0;
+    color: #d81b60;
+    font-size: 15px;
+    text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
 }
 
 .ramo p {
@@ -195,7 +199,6 @@ h1 {
     }
 }
 
-/* Efecto de onda al hacer clic */
 @keyframes onda {
     0% {
         transform: scale(1);
