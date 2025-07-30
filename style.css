@@ -1,31 +1,217 @@
+:root {
+    --rosa-claro: #ffebee;
+    --rosa-pastel: #f8bbd0;
+    --rosa-medio: #f48fb1;
+    --rosa-oscuro: #f06292;
+    --magenta-claro: #fce4ec;
+    --magenta-medio: #f8bbd0;
+    --magenta-oscuro: #e91e63;
+    --texto-oscuro: #333;
+}
+
 body {
-  font-family: sans-serif;
-  background-color: #f9f9f9;
-  padding: 2rem;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--magenta-claro);
+    color: var(--texto-oscuro);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to right, var(--rosa-oscuro), var(--magenta-oscuro));
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.creditos-totales {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.leyendas-header {
+    margin-top: 0.5rem;
+    color: #aaa;
+    font-style: italic;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.leyendas-header small {
+    display: inline-block;
+    margin: 0 0.5rem;
+    line-height: 1.3;
+    font-size: 0.85rem;
+    color: #e0e0e0;
+}
+
+.malla-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.year-section {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.year-section:hover {
+    transform: translateY(-5px);
+}
+
+.year-section h2 {
+    font-family: 'Lobster', cursive;
+    background: linear-gradient(to right, var(--rosa-medio), var(--magenta-medio));
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.semester {
+    padding: 1rem;
+    border-bottom: 1px solid var(--rosa-claro);
+}
+
+.semester:last-child {
+    border-bottom: none;
+}
+
+.semester h3 {
+    color: var(--magenta-oscuro);
+    margin-top: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dashed var(--rosa-medio);
+    font-size: 1.3rem;
+}
+
+.ramos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
 }
 
 .ramo {
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border: 1px solid #aaa;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-  transition: opacity 0.3s;
+    background-color: var(--rosa-claro);
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--magenta-medio);
+    position: relative;
+    overflow: hidden;
 }
 
-.ramo.aprobado {
-  text-decoration: line-through;
-  background-color: #cce5cc;
-  opacity: 0.6;
+.ramo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ramo h4 {
+    font-family: 'Lobster', cursive;
+    margin: 0 0 0.5rem 0;
+    color: var(--magenta-oscuro);
+    font-size: 1.1rem;
+}
+
+.ramo p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--texto-oscuro);
+}
+
+.ramo.completado {
+    background-color: #e8f5e9;
+    border-left: 4px solid #81c784;
+    position: relative;
+}
+
+.ramo.completado h4 {
+    text-decoration: line-through;
+    color: #2e7d32;
+}
+
+.ramo.completado::after {
+    content: "✓";
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .ramo.bloqueado {
-  opacity: 0.4;
-  pointer-events: none;
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    border-left: 4px solid #bdbdbd;
 }
 
-#creditos {
-  margin-top: 2rem;
-  font-weight: bold;
+.ramo.bloqueado h4 {
+    color: #757575;
+}
+
+.ramo[data-requisitos="Todos"] {
+    background-color: #e3f2fd;
+    border-left: 4px solid #64b5f6;
+}
+
+.ramo[data-requisitos="Todos"] h4 {
+    color: #1565c0;
+}
+
+@media (max-width: 768px) {
+    .ramos-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .year-section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Efecto de onda al hacer clic */
+@keyframes onda {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.onda {
+    position: absolute;
+    background-color: rgba(129, 199, 132, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: onda 0.5s ease-out;
+    pointer-events: none;
 }
